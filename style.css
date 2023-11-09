@@ -13,6 +13,7 @@
 body {
   margin: 0 auto;
   width: 1440px;
+  background: var(--bg-body);
 }
 
 .wrap {
