@@ -55,14 +55,24 @@ a {
   background: url(assets/slider/arrow-left.svg) center no-repeat;
   width: 60px;
   height: 60px;
+  border: 1px solid var(--border-dark);
+  border-radius: 100px;
 }
 .slider_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .about_wrap {
+  display: flex;
 }
 .first_column {
+  display: flex;
+  flex-direction: column;
 }
 .second_column {
+  display: flex;
+  flex-direction: column;
 }
 .buttons_wrap {
 }
