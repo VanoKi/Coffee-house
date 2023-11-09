@@ -1,0 +1,42 @@
+:root {
+  font-family: 'Inter';
+  --text-dark: #403F3D;
+  --text-light: #E1D4C9;
+  --text-accent: #B0907A;
+  --bg-body: #E1D4C9;
+  --bg-container: #665F55;
+  --bg-backdrop: #403F3DCC;
+  --border-light: #C1B6AD;
+  --border-dark: #665F55;
+}
+
+body {
+  margin: 0 auto;
+  width: 1440px;
+}
+
+.wrap {
+  margin: 0 auto;
+  border: red 1px solid;
+  max-width: 1360px;
+}
+.logo {
+}
+.slider {
+}
+.arrow_wrap {
+}
+.slider_card {
+}
+.about_wrap {
+}
+.first_column {
+}
+.second_column {
+}
+.buttons_wrap {
+}
+.footer_icons_wrap {
+}
+.footer_ico {
+}
