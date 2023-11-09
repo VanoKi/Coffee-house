@@ -36,11 +36,25 @@ a {
   border: red 1px solid;
   max-width: 1360px;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
+  width: 100px;
+  height: 60px;
+  border: green 1px solid;
 }
 .slider {
+
 }
 .arrow_wrap {
+  background: url(assets/slider/arrow-left.svg) center no-repeat;
+  width: 60px;
+  height: 60px;
 }
 .slider_card {
 }
