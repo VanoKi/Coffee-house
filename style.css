@@ -1,5 +1,4 @@
 :root {
-  font-family: 'Inter';
   --text-dark: #403F3D;
   --text-light: #E1D4C9;
   --text-accent: #B0907A;
@@ -15,6 +14,7 @@ body {
   width: 1440px;
   background: var(--bg-body);
   border: 2px solid blue;
+  font-family: 'Inter', sans-serif;
 }
 
 ul {
@@ -37,6 +37,8 @@ a {
   max-width: 1360px;
 }
 
+/*header start*/
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -44,7 +46,7 @@ a {
 }
 
 .header_menu {
-  align-items: flex-end;
+  gap: 8px;
 }
 
 .logo {
@@ -52,6 +54,14 @@ a {
   height: 60px;
   border: green 1px solid;
 }
+
+.main-menu {
+  display: flex;
+  padding: 0;
+  gap: 40px;
+}
+
+/*header end*/
 
 .slider {
 
