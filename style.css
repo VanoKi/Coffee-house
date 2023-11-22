@@ -58,6 +58,11 @@ a {
   border: 1px solid var(--border-dark);
   border-radius: 100px;
 }
+
+/* .right_arrow {
+  rotate: 180;
+} */
+
 .slider_card {
   display: flex;
   flex-direction: column;
