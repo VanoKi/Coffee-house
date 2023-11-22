@@ -43,6 +43,10 @@ a {
   align-items: center;
 }
 
+.header_menu {
+  align-items: flex-end;
+}
+
 .logo {
   width: 100px;
   height: 60px;
