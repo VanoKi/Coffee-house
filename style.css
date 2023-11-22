@@ -86,6 +86,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
+  color: var(--text-dark);
 }
 
 /*enjoy start*/
@@ -112,6 +113,10 @@ a {
   height: 60px;
   background: var(--bg-body);
   border-radius: 100px;
+}
+
+.btn-menu_font-weight {
+  font-weight: 600;
 }
 
 /*enjoy end*/
