@@ -69,6 +69,50 @@ a {
 
 /*header end*/
 
+/*Typography*/
+
+.heading-1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
+}
+
+.heading-accent {
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+.font-medium {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/*enjoy start*/
+
+.enjoy {
+  max-width: 1360px;
+  /* height: auto; */
+  background-image: url(assets/enjoy/img-hero.jpg);
+  /* background-size: contain; */
+  border-radius: 40px;
+  padding: 100px;
+}
+
+.heading-1_color {
+  color: var(--text-light);
+}
+
+.font-medium_light {
+  color: var(--text-light);
+}
+
+.btn-menu {
+  
+}
+
+/*enjoy end*/
+
 .slider {
 
 }
