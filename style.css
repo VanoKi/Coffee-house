@@ -91,7 +91,7 @@ a {
 /*enjoy start*/
 
 .enjoy {
-  max-width: 1360px;
+  /* max-width: 1360px; */
   /* height: auto; */
   background-image: url(assets/enjoy/img-hero.jpg);
   /* background-size: contain; */
@@ -108,7 +108,10 @@ a {
 }
 
 .btn-menu {
-  
+  width: 200px;
+  height: 60px;
+  background: var(--bg-body);
+  border-radius: 100px;
 }
 
 /*enjoy end*/
