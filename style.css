@@ -48,6 +48,7 @@ a {
   height: 60px;
   border: green 1px solid;
 }
+
 .slider {
 
 }
@@ -59,29 +60,35 @@ a {
   border-radius: 100px;
 }
 
-/* .right_arrow {
-  rotate: 180;
-} */
+.right_arrow {
+  transform: rotate(180deg);
+}
 
 .slider_card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .about_wrap {
   display: flex;
 }
+
 .first_column {
   display: flex;
   flex-direction: column;
 }
+
 .second_column {
   display: flex;
   flex-direction: column;
 }
+
 .buttons_wrap {
 }
+
 .footer_icons_wrap {
 }
+
 .footer_ico {
 }
