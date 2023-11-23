@@ -187,7 +187,22 @@ a {
 .footer_icons_wrap {
 }
 
-.footer_ico {
+.footer-ico {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+}
+
+.footer-ico_twit {
+  background-image: url(assets/footer/twitter.svg);
+}
+
+.footer-ico_inst {
+  background-image: url(assets/footer/instagram.svg);
+}
+
+.footer-ico_fb {
+  background-image: url(assets/footer/facebook.svg);
 }
 
 .footer__bg {
