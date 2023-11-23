@@ -14,9 +14,9 @@
   padding: 0;
 }
 
-div {
+/* div {
   border: 1px solid red;
-}
+} */
 
 body {
   margin: 0 auto;
@@ -345,9 +345,25 @@ button {
 .footer__bg {
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  justify-content: space-around;
+  /* gap: 100px; */
   background: var(--bg-container);
   border-radius: 40px;
+  padding: 100px;
+}
+
+.footer_content {
+  width: 530px;
+}
+
+.footer_list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer_right-column {
+  justify-content: center;
 }
 
 /*footer end*/
