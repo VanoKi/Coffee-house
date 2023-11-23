@@ -14,11 +14,15 @@
   padding: 0;
 }
 
+div {
+  border: 1px solid red;
+}
+
 body {
   margin: 0 auto;
   width: 1440px;
   background: var(--bg-body);
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   font-family: 'Inter', sans-serif;
   color: var(--text-dark);
 }
@@ -47,7 +51,7 @@ button {
 
 .wrap {
   margin: 0 auto;
-  border: red 1px solid;
+  /* border: red 1px solid; */
   max-width: 1360px;
 }
 
@@ -221,6 +225,7 @@ button {
 .about_wrap {
   display: flex;
   gap: 40px;
+  justify-content: space-between;
 }
 
 .about_img {
@@ -308,12 +313,21 @@ button {
 /*footer start*/
 
 .footer_icons_wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 }
 
 .footer-ico {
   width: 60px;
   height: 60px;
   background-size: cover;
+  border-radius: 100px;
+  border: 1px var(--border-light) solid;
+  /* padding: 18px; */
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .footer-ico_twit {
@@ -329,6 +343,9 @@ button {
 }
 
 .footer__bg {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
   background: var(--bg-container);
   border-radius: 40px;
 }
