@@ -37,6 +37,10 @@ a {
   color: inherit;
 }
 
+section {
+  padding-bottom: 100px;
+}
+
 .wrap {
   margin: 0 auto;
   border: red 1px solid;
