@@ -72,9 +72,15 @@ a {
 /*Typography*/
 
 .heading-1 {
+  margin: 0;
   font-size: 72px;
   font-weight: 600;
   line-height: 105%;
+}
+
+
+.heading-1_color {
+  color: var(--text-light);
 }
 
 .heading-2 {
@@ -115,26 +121,21 @@ a {
   /* background-size: contain; */
   border-radius: 40px;
   padding: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  align-self: stretch;
 }
 
-.heading-1_color {
-  color: var(--text-light);
+.enjoy__content {
+  width: 530px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .btn-menu {
   width: 200px;
   height: 60px;
   background: var(--bg-body);
+  border: none;
   border-radius: 100px;
-}
-
-.btn-menu_font-weight {
-  font-weight: 600;
 }
 
 /*enjoy end*/
