@@ -97,8 +97,12 @@ a {
 
 .font-medium {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 150%;
+}
+
+.font-medium_light {
+  color: var(--text-light);
 }
 
 /*end typoghraphy*/
@@ -120,10 +124,6 @@ a {
 }
 
 .heading-1_color {
-  color: var(--text-light);
-}
-
-.font-medium_light {
   color: var(--text-light);
 }
 
