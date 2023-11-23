@@ -260,8 +260,26 @@ button {
   gap: 40px;
 }
 
-.buttons_wrap {
+/* app start*/
+
+.app_column {
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
+
+.app-content {
+  margin: auto 0;
+  width: 630px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.buttons_wrap {
+
+}
+
+/* app end */
 
 /*footer start*/
 
