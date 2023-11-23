@@ -276,7 +276,31 @@ button {
 }
 
 .buttons_wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 
+.btn__app {
+  width: 200px;
+  height: 64px;
+  border-radius: 100px;
+  border: var(--border-dark) 1px solid;
+  background-color: var(--bg-body);
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px;
+}
+
+.bnt_text {
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.btn_subtitle {
+  font-size: 10px;
+  line-height: 140%;
+  text-align: left;
 }
 
 /* app end */
