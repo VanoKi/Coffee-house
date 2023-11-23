@@ -47,7 +47,7 @@ section {
   max-width: 1360px;
 }
 
-/*header start*/
+/* header start */
 
 .header {
   display: flex;
@@ -71,9 +71,9 @@ section {
   gap: 40px;
 }
 
-/*header end*/
+/* header end */
 
-/*Typography*/
+/* Typography */
 
 .heading-1 {
   margin: 0;
@@ -118,9 +118,9 @@ section {
   font-weight: 400;
 }
 
-/*end typoghraphy*/
+/* end typoghraphy */
 
-/*enjoy start*/
+/* enjoy start */
 
 .enjoy {
   /* max-width: 1360px; */
@@ -146,11 +146,24 @@ section {
   border-radius: 100px;
 }
 
-/*enjoy end*/
+/* enjoy end */
+
+/* slider */
 
 .slider {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.slider__inner {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .arrow_wrap {
   background: url(assets/slider/arrow-left.svg) center no-repeat;
   width: 60px;
@@ -164,10 +177,15 @@ section {
 }
 
 .slider_card {
+  width: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+  text-align: center;
 }
+
+/* slider end */
 
 .about_wrap {
   display: flex;
