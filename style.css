@@ -185,6 +185,19 @@ section {
   text-align: center;
 }
 
+.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.control {
+  width: 40px;
+  height: 4px;
+  border: var(--border-light) 1px solid;
+  border-radius: 100px;
+}
+
 /* slider end */
 
 .about_wrap {
