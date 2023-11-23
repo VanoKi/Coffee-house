@@ -172,8 +172,17 @@ a {
 .buttons_wrap {
 }
 
+/*footer start*/
+
 .footer_icons_wrap {
 }
 
 .footer_ico {
 }
+
+.footer__bg {
+  background: var(--bg-container);
+  border-radius: 40px;
+}
+
+/*footer end*/
