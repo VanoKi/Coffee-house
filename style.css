@@ -46,7 +46,7 @@ li a img {
 }
 
 section {
-  padding-bottom: 98px;
+  padding-bottom: 101px;
 }
 
 button {
@@ -142,7 +142,7 @@ button {
   background-size: cover;
   background-position-y: -30px;
   border-radius: 40px;
-  padding: 103px;
+  padding: 101px;
   /* margin-bottom: 10px; */
 }
 
@@ -282,8 +282,8 @@ button {
 /* app start*/
 
 .app_column {
-  margin-top: 4px;
-  margin-bottom: 2px;
+  /* margin-top: 4px; */
+  /* margin-bottom: 2px; */
 }
 
 .app-content {
@@ -378,13 +378,13 @@ button {
 .footer_list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 17px;
 }
 
 .footer_right-column {
   padding-right: 100px;
-  padding-bottom: 12px;
-  padding-top: 8px;
+  padding-bottom: 20px;
+  padding-top: 11px;
   justify-content: center;
 }
 
