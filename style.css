@@ -301,7 +301,7 @@ button {
 }
 
 .btn__app {
-  /* width: 200px; */
+  width: 157px;
   /* height: 64px; */
   border-radius: 100px;
   border: var(--border-dark) 1px solid;
@@ -309,6 +309,18 @@ button {
   display: flex;
   gap: 8px;
   padding: 12px 20px;
+}
+
+.btn__app:hover {
+  background-color: var(--bg-container);
+}
+
+.btn__app:hover p {
+  color: var(--text-light);
+}
+
+.btn__app:hover svg{
+  fill: var(--text-light);
 }
 
 .bnt_text {
