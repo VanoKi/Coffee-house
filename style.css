@@ -42,7 +42,7 @@ a {
 }
 
 section {
-  padding-bottom: 89px;
+  padding-bottom: 93px;
 }
 
 button {
@@ -170,7 +170,7 @@ button {
 .slider__inner {
   width: 100%;
   padding-top: 39px;
-  padding-bottom: 42px;
+  padding-bottom: 33px;
   /* padding: 45px 0; */
   display: flex;
   flex-direction: row;
@@ -355,13 +355,18 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* gap: 100px; */
+  /* gap: 0px; */
   background: var(--bg-container);
   border-radius: 40px;
-  padding: 100px;
+  /* padding: 100px; */
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* padding-left: 3px; */
+  margin-bottom: 40px;
 }
 
 .footer_content {
+  padding-left: 100px;
   width: 530px;
 }
 
@@ -372,6 +377,9 @@ button {
 }
 
 .footer_right-column {
+  padding-right: 100px;
+  padding-bottom: 12px;
+  padding-top: 8px;
   justify-content: center;
 }
 
