@@ -41,7 +41,7 @@ a {
   color: inherit;
 }
 
-a img {
+li a img {
   padding-right: 5px;
 }
 
@@ -378,7 +378,7 @@ button {
 .footer_list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 }
 
 .footer_right-column {
