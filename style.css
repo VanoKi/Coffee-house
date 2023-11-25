@@ -12,6 +12,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* box-sizing: border-box; */
 }
 
 /* div {
@@ -324,10 +325,6 @@ button {
   fill: var(--text-light);
 }
 
-.btn__app object svg path {
-  fill: var(--text-light) !important;
-}
-
 .bnt_text {
   flex-direction: column;
   align-self: flex-start;
@@ -346,31 +343,29 @@ button {
 .footer_icons_wrap {
   display: flex;
   flex-direction: row;
-  gap: 9px;
+  gap: 12px;
 }
 
 .footer-ico {
   width: 60px;
   height: 60px;
-  background-size: cover;
+  /* background-size: cover; */
   border-radius: 100px;
   border: 1px var(--border-light) solid;
-  /* padding: 18px; */
-  background-size: auto;
+  box-sizing: border-box;
+  padding: 18px;
+  /* background-size: auto;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  transition: background .5s;
 }
 
-.footer-ico_twit {
-  background-image: url(assets/footer/twitter.svg);
+.footer-ico:hover {
+  background-color: var(--bg-body);
 }
 
-.footer-ico_inst {
-  background-image: url(assets/footer/instagram.svg);
-}
-
-.footer-ico_fb {
-  background-image: url(assets/footer/facebook.svg);
+.footer-ico:hover svg path{
+  stroke: var(--text-dark)
 }
 
 .footer__bg {
