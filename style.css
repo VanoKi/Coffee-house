@@ -301,7 +301,7 @@ button {
 }
 
 .btn__app {
-  width: 157px;
+  width: 158px;
   /* height: 64px; */
   border-radius: 100px;
   border: var(--border-dark) 1px solid;
@@ -309,6 +309,7 @@ button {
   display: flex;
   gap: 8px;
   padding: 12px 20px;
+  transition: background-color .5s;
 }
 
 .btn__app:hover {
@@ -319,8 +320,12 @@ button {
   color: var(--text-light);
 }
 
-.btn__app:hover svg{
+.btn__app:hover svg path{
   fill: var(--text-light);
+}
+
+.btn__app object svg path {
+  fill: var(--text-light) !important;
 }
 
 .bnt_text {
