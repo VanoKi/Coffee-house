@@ -160,7 +160,10 @@ header nav a:hover {
   background-size: cover;
   background-position-y: -30px;
   border-radius: 40px;
-  padding: 101px;
+  /* padding: 101px; */
+  padding-left: 100px;
+  padding-top: 104px;
+  padding-bottom: 102px;
   /* margin-bottom: 10px; */
 }
 
@@ -169,7 +172,7 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-bottom: 4px;
+  /* padding-bottom: 4px; */
 }
 
 .btn-menu {
