@@ -232,6 +232,11 @@ button {
   cursor: pointer;
 }
 
+.control:hover {
+  border: var(--border-dark);
+  background-color: var(--border-dark);
+}
+
 .control_active {
   border: var(--border-dark);
   background-color: var(--border-dark);
