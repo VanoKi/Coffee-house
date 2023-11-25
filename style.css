@@ -71,6 +71,7 @@ button {
 
 .header_menu {
   gap: 8px;
+  padding: 6px;
 }
 
 .logo {
@@ -83,6 +84,21 @@ button {
   display: flex;
   padding: 0;
   gap: 40px;
+}
+
+header a {
+  display: block;
+  padding: 6px;
+}
+
+header nav a:hover {
+  border-bottom: 2px var(--text-dark) solid;
+  padding-bottom: 4px;
+}
+
+.header_menu:hover {
+  border-bottom: 2px var(--text-dark) solid;
+  padding-bottom: 4px;
 }
 
 /* header end */
