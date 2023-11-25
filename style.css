@@ -452,16 +452,15 @@ header nav a:hover {
   box-sizing: border-box;
   display: block;
   padding-bottom: 8px;
+  width: fit-content;
+  /* transition: border-bottom .5s;
+  transition: padding-bottom .5s; */
 }
 
 .footer__column_right {
   display: flex;
   flex-direction: column;
   align-items: start;
-}
-
-.footer_list a {
-  width: fit-content;
 }
 
 .footer_list a:hover {
