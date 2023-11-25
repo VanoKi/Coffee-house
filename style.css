@@ -71,24 +71,25 @@ button {
 
 .header_menu {
   gap: 8px;
-  padding: 6px;
+  padding: 6px 0;
 }
 
 .logo {
   width: 100px;
   height: 60px;
   /* border: green 1px solid; */
+  padding: 0;
 }
 
 .main-menu {
   display: flex;
   padding: 0;
-  gap: 40px;
+  gap: 41px;
 }
 
-header a {
+header nav a {
   display: block;
-  padding: 6px;
+  padding: 6px 0;
 }
 
 header nav a:hover {
@@ -449,6 +450,10 @@ header nav a:hover {
   justify-content: center;
 }
 
-
+footer a {
+  box-sizing: border-box;
+  display: block;
+  padding: 8px 0;
+}
 
 /*footer end*/
