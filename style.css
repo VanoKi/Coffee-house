@@ -307,8 +307,13 @@ header nav a:hover {
 .about_img {
   border-radius: 20px;
   width: 660px;
-  /* background-size: cover; */
+  background-size: 110%;
   background-position: center;
+  transition: .5s;
+}
+
+.about_img:hover {
+  background-size: 100%;
 }
 
 .about_img__large {
