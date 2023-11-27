@@ -399,6 +399,8 @@ header nav a:hover {
 .btn_subtitle {
   font-size: 10px;
   line-height: 140%;
+  font-style: normal;
+  font-weight: 600;
   text-align: left;
 }
 
