@@ -119,6 +119,7 @@ header nav a:hover {
 }
 
 .heading-2 {
+  margin: 0;
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
@@ -481,7 +482,8 @@ header nav a:hover {
 .menu__btn-wrap {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 18px;
+  padding-bottom: 38px;
 }
 
 .menu__btn {
@@ -520,7 +522,8 @@ header nav a:hover {
 
 .menu__heading {
   text-align: center;
-  /* padding: 20px 280px 40px; */
+  /* font-feature-settings: 'clig' off, 'liga' off; */
+  padding: 0 0 40px;
 }
 
 .menu__cards {
@@ -532,6 +535,9 @@ header nav a:hover {
 
 .menu__card {
   width: 310px;
+  height: 506px;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--border-light);
   border-radius: 40px;
 }
@@ -543,7 +549,26 @@ header nav a:hover {
 }
 
 .menu__card_description {
+  /* padding: 15px 20px 20px; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  display: flex;
   padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* flex: 1 0 0;
+  align-self: stretch; */
+}
+
+.menu__card_text {
+  height: 127px;
+}
+
+.menu__card_title {padding-bottom: 12px;}
+
+.menu__card_summary {
+  /* padding-bottom: 36px; */
 }
 
 /* menu end */
