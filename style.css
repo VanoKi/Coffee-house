@@ -93,12 +93,30 @@ button {
 
 header nav a {
   display: block;
-  padding: 6px 0;
+  /* padding: 6px 0; */
+  position: relative;
 }
 
-header nav a:hover {
-  border-bottom: 2px var(--text-dark) solid;
-  padding-bottom: 4px;
+header nav a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0) translateY(4px);
+  opacity: 0;
+  transition: .5s;
+  height: 2px;
+  background-color: var(--text-dark);
+}
+
+header nav a:hover::after {
+  /* border-bottom: 2px var(--text-dark) solid;
+  padding-bottom: 4px; */
+  /* cursor: pointer; */
+  transform: scaleX(1) translateY(0);
+  opacity: 1;
 }
 
 .header_menu:hover {
