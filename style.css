@@ -145,7 +145,8 @@ header nav a:hover::after {
 .header_menu_active {
   border-bottom: 2px var(--text-dark) solid;
   padding-bottom: 4px;
-  cursor: default
+  cursor: default;
+  pointer-events: none;
 }
 
 /* header end */
