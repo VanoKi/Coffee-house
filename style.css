@@ -511,4 +511,34 @@ header nav a:hover {
   color: var(--text-light);
 }
 
+.menu__btn:hover {
+  background: var(--bg-container);
+  color: var(--text-light);
+}
+
+/* menu__cards */
+
+.menu__cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.menu__card {
+  width: 310px;
+  border: 1px solid var(--border-light);
+  border-radius: 40px;
+}
+
+.menu__card img {
+  border-radius: 40px;
+  width: 310px;
+  height: 310px;
+}
+
+.menu__card_description {
+  padding: 20px;
+}
+
 /* menu end */
