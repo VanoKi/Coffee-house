@@ -546,12 +546,26 @@ header nav a:hover {
   flex-direction: column;
   border: 1px solid var(--border-light);
   border-radius: 40px;
+  cursor: pointer;
+}
+
+.menu__card_image-wrap {
+  overflow: hidden;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu__card img {
-  border-radius: 40px;
-  width: 310px;
-  height: 310px;
+  display: inline-block;
+  width: 340px;
+  height: 340px;
+  transition: .5s;
+}
+
+.menu__card:hover img{
+  transform: scale(0.9);
 }
 
 .menu__card_description {
