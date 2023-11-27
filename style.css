@@ -518,6 +518,11 @@ header nav a:hover {
 
 /* menu__cards */
 
+.menu__heading {
+  text-align: center;
+  /* padding: 20px 280px 40px; */
+}
+
 .menu__cards {
   display: flex;
   flex-direction: row;
