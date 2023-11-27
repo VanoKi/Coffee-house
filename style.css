@@ -9,6 +9,10 @@
   --border-dark: #665F55;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -547,7 +551,7 @@ header nav a:hover {
 
 .menu__card {
   width: 310px;
-  height: 506px;
+  /* height: 506px; */
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border-light);
@@ -580,7 +584,7 @@ header nav a:hover {
   /* display: flex; */
   /* flex-direction: column; */
   display: flex;
-  padding: 20px;
+  padding: 20px 20px;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
