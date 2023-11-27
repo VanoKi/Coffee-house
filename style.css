@@ -506,4 +506,9 @@ header nav a:hover {
   background: var(--border-light);
 }
 
+.menu__btn_active {
+  background: var(--bg-container);
+  color: var(--text-light);
+}
+
 /* menu end */
