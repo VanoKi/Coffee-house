@@ -502,23 +502,40 @@ header nav a:hover::after {
   gap: 17px;
 }
 
-.footer_list a {
-  box-sizing: border-box;
-  display: block;
-  padding-bottom: 8px;
-  width: fit-content;
-  transition: .5s;
-}
-
 .footer__column_right {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
-.footer_list a:hover {
-  padding-bottom: 4px;
-  border-bottom: 4px solid var(--text-light);
+.footer_list a {
+  box-sizing: border-box;
+  display: block;
+  padding-bottom: 8px;
+  width: fit-content;
+  transition: .5s;
+  position: relative;
+}
+
+.footer_list a:hover::after {
+  /* padding-bottom: 4px;
+  border-bottom: 4px solid var(--text-light); */
+  transform: scaleX(1) translateY(0);
+  opacity: 1;
+}
+
+.footer_list a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0) translateY(4px);
+  opacity: 0;
+  transition: .5s;
+  height: 2px;
+  background-color: var(--text-light);
 }
 
 /*footer end*/
