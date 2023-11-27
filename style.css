@@ -240,7 +240,7 @@ header nav a:hover {
   border-radius: 100px;
   padding: 18px;
   cursor: pointer;
-  transition: background .5s;
+  transition: .5s;
 }
 
 .arrow_wrap:hover svg path{
@@ -376,7 +376,7 @@ header nav a:hover {
   display: flex;
   gap: 8px;
   padding: 12px 20px;
-  transition: background-color .5s;
+  transition: .5s;
 }
 
 .btn__app:hover {
@@ -423,7 +423,7 @@ header nav a:hover {
   /* background-size: auto;
   background-position: center;
   background-repeat: no-repeat; */
-  transition: background .5s;
+  transition: .5s;
 }
 
 .footer-ico:hover {
@@ -465,8 +465,7 @@ header nav a:hover {
   display: block;
   padding-bottom: 8px;
   width: fit-content;
-  /* transition: border-bottom .5s;
-  transition: padding-bottom .5s; */
+  transition: .5s;
 }
 
 .footer__column_right {
