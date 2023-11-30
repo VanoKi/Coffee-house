@@ -671,6 +671,14 @@ header nav a:hover::after {
     display: none;
   }
 
+  .enjoy {
+    padding: 105px 60px;
+  }
+
+  .heading-2__center {
+    text-align: center;
+  }
+
   .about_img__small {
     display: none;
   }
@@ -679,9 +687,25 @@ header nav a:hover::after {
     flex-direction: column;
   }
 
+  .app-content {
+    width: 680px;
+  }
+
+  .mobile-screens {
+    margin: 0 auto;
+    padding-top: 57px;
+    width: 630px;
+    /* height: 630px; */
+  }
+
   .footer__bg {
     flex-direction: column;
     align-items: flex-start;
+    padding: 100px 60px;
+  }
+
+  .footer_list a {
+    padding-bottom: 0;
   }
 
 }
