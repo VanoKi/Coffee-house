@@ -659,6 +659,12 @@ header nav a:hover::after {
 /* menu end */
 
 @media (max-width: 768px) {
+
+  /* body {
+    width: 768px;
+  }
+   */
+
   .wrap {
     max-width: 688px;
   }
@@ -681,6 +687,10 @@ header nav a:hover::after {
 
   .about_img__small {
     display: none;
+  }
+
+  .about_img {
+    max-width: 100%;
   }
 
   .about_wrap {
@@ -706,6 +716,10 @@ header nav a:hover::after {
 
   .footer_list a {
     padding-bottom: 0;
+  }
+
+  .menu__cards {
+    
   }
 
 }
