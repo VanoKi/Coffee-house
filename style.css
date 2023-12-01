@@ -145,7 +145,7 @@ header nav a:hover::after {
 .header_menu_active {
   border-bottom: 2px var(--text-dark) solid;
   padding-bottom: 4px;
-  cursor: default;
+  /* cursor: default; */
   pointer-events: none;
 }
 
@@ -581,6 +581,7 @@ header nav a:hover::after {
 .menu__btn_active {
   background: var(--bg-container);
   color: var(--text-light);
+  cursor: default;
 }
 
 .menu__btn:hover {
@@ -781,7 +782,7 @@ header nav a:hover::after {
     height: 2px;
     width: 16px;
     background-color: var(--text-dark);
-    transition: all 0.3s ease 0s;
+    transition: all 0.5s ease 0s;
   }
 
   .burger-menu::before {
@@ -790,6 +791,20 @@ header nav a:hover::after {
 
   .burger-menu::after {
     bottom: 15px;
+  }
+
+  .burger-menu.active span {
+    transform: scale(0);
+  }
+
+  .burger-menu.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+
+  .burger-menu.active::after {
+    top: 50%;
+    transform: rotate(45deg) translate(0, -50%);
   }
 
 }
