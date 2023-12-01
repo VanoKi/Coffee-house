@@ -768,10 +768,28 @@ header nav a:hover::after {
   }
 
   .burger-menu span {
+    display: none;
     height: 2px;
     width: 16px;
     transform: scale(1);
-    background: var(--border-dark);
+    background: var(--text-dark);
+  }
+
+  .burger-menu::before, .burger-menu::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 16px;
+    background-color: var(--text-dark);
+    transition: all 0.3s ease 0s;
+  }
+
+  .burger-menu::before {
+    top: 18px;
+  }
+
+  .burger-menu::after {
+    bottom: 15px;
   }
 
 }
