@@ -284,13 +284,13 @@ header nav a:hover::after {
   transition: .5s;
 }
 
-.arrow_wrap:hover svg path{
+/* .arrow_wrap:hover svg path{
   stroke: var(--text-light);
 }
 
 .arrow_wrap:hover {
   background: var(--bg-container);
-}
+} */
 
 
 .slider_card {
@@ -321,10 +321,10 @@ header nav a:hover::after {
   cursor: pointer;
 }
 
-.control:hover {
+/* .control:hover {
   border: var(--border-dark);
   background-color: var(--border-dark);
-}
+} */
 
 .control_active {
   border: var(--border-dark);
@@ -353,9 +353,9 @@ header nav a:hover::after {
   transition: .5s;
 }
 
-.about_img:hover {
+/* .about_img:hover {
   background-size: 100%;
-}
+} */
 
 .about_img__large {
   height: 590px;
@@ -420,7 +420,7 @@ header nav a:hover::after {
   transition: .5s;
 }
 
-.btn__app:hover {
+/* .btn__app:hover {
   background-color: var(--bg-container);
 }
 
@@ -430,7 +430,7 @@ header nav a:hover::after {
 
 .btn__app:hover svg path{
   fill: var(--text-light);
-}
+} */
 
 .bnt_text {
   flex-direction: column;
@@ -469,13 +469,13 @@ header nav a:hover::after {
   transition: .5s;
 }
 
-.footer-ico:hover {
+/* .footer-ico:hover {
   background-color: var(--bg-body);
 }
 
 .footer-ico:hover svg path{
   stroke: var(--text-dark)
-}
+} */
 
 .footer__bg {
   display: flex;
@@ -584,10 +584,10 @@ header nav a:hover::after {
   cursor: default;
 }
 
-.menu__btn:hover {
+/* .menu__btn:hover {
   background: var(--bg-container);
   color: var(--text-light);
-}
+} */
 
 /* menu__cards */
 
@@ -630,9 +630,9 @@ header nav a:hover::after {
   transition: .5s;
 }
 
-.menu__card:hover img{
+/* .menu__card:hover img{
   transform: scale(1);
-}
+} */
 
 .menu__card_description {
   /* padding: 15px 20px 20px; */
@@ -669,9 +669,9 @@ header nav a:hover::after {
   transition: .5s;
 }
 
-.menu-section .arrow_wrap {
+/* .menu-section .arrow_wrap {
   display: block;
-}
+} */
 
 /* menu end */
 
@@ -682,6 +682,55 @@ header nav a:hover::after {
 }
 
 /* burger end */
+
+@media (hover: hover) and (pointer: fine) {
+  .menu__btn:hover {
+    background: var(--bg-container);
+    color: var(--text-light);
+  }
+
+  .arrow_wrap:hover svg path{
+    stroke: var(--text-light);
+  }
+  
+  .arrow_wrap:hover {
+    background: var(--bg-container);
+  }
+
+  .btn__app:hover {
+    background-color: var(--bg-container);
+  }
+  
+  .btn__app:hover p {
+    color: var(--text-light);
+  }
+  
+  .btn__app:hover svg path{
+    fill: var(--text-light);
+  }
+
+  .control:hover {
+    border: var(--border-dark);
+    background-color: var(--border-dark);
+  }
+
+  .menu__card:hover img{
+    transform: scale(1);
+  }
+
+  .footer-ico:hover {
+    background-color: var(--bg-body);
+  }
+  
+  .footer-ico:hover svg path{
+    stroke: var(--text-dark)
+  }
+
+  .about_img:hover {
+    background-size: 100%;
+  }
+
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
