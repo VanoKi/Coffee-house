@@ -690,6 +690,12 @@ header nav a:hover::after {
     align-items: center;
   }
 
+  .menu__cards {
+    width: 660px;
+    height: 1058px;
+    overflow: hidden;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -839,6 +845,22 @@ header nav a:hover::after {
   .burger-menu.active::after {
     top: 50%;
     transform: rotate(45deg) translate(0, -50%);
+  }
+
+}
+
+@media (min-width: 381px) and (max-width: 767px) {
+
+  .wrap {
+    max-width: 90vw;
+  }
+
+  .slider__inner {
+    width: 90vw;
+  }
+
+  .about_wrap {
+    align-items: center;
   }
 
 }
