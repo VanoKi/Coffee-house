@@ -247,8 +247,8 @@ header nav a:hover::after {
 }
 
 .btn-menu:hover {
-  padding-right: 64px;
-  padding-right: 78px;
+  /* padding-right: 64px;
+  padding-right: 78px; */
 }
 
 /* enjoy end */
@@ -912,6 +912,9 @@ header nav a:hover::after {
     transform: rotate(45deg) translate(0, -50%);
   }
 
+  .btn-menu img {
+    display: inline-block;
+  }
 }
 
 @media (min-width: 381px) and (max-width: 699px) {
