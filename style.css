@@ -821,7 +821,7 @@ header nav a:hover::after {
   }
 
   .buttons_wrap {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .mobile-screens {
@@ -986,7 +986,9 @@ header nav a:hover::after {
   }
 
   .app-content {
+    margin: 0 auto;
     width: 348px;
+    align-items: center;
   }
 
   .mobile-screens {
@@ -1004,6 +1006,12 @@ header nav a:hover::after {
     padding-top: 4px;
   }
 
+}
+
+@media (max-width: 480px) {
+  .buttons_wrap {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 380px) {
