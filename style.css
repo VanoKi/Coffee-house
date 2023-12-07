@@ -796,12 +796,12 @@ header nav a:hover::after {
     top: 10%;
     right: 0;
     z-index: 2;
-    transition: right .5s ease;
+    transition: right .7s ease;
   }
 
   .header__main-nav_disabled {
     right: -768px;
-    transition: right .5s ease;
+    transition: right .7s ease;
   }
 
   .header_menu {
@@ -817,7 +817,7 @@ header nav a:hover::after {
     background: var(--bg-body);
     /* padding: 124px; */
     z-index: 1;
-    transition: right .5s ease;
+    transition: right .7s ease;
   }
 
   .header_menu img {
@@ -827,7 +827,7 @@ header nav a:hover::after {
 
   .header_menu_disabled {
     right: -768px;
-    transition: right .5s ease;
+    transition: right .7s ease;
   }
 
   .main-menu {
