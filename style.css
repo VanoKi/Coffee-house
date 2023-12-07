@@ -1106,5 +1106,10 @@ header nav a:hover::after {
     padding-top: 4px;
   }
 
+  .footer__bg {
+    padding: 60px 16px;
+    gap: 40px;
+  }
+
 }
 
