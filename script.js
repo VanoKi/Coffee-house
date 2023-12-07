@@ -12,7 +12,12 @@ function toogleBurger() {
     mainNav.classList.toggle('header__main-nav_disabled');
     menu.classList.toggle('header_menu_disabled');
     body.classList.toggle('no-scroll');
+    console.log('toogled');
 }
 
 burgIco.addEventListener('click', toogleBurger)
+const link = document.querySelectorAll('a')
+link.forEach(element => {
+    element.addEventListener('click', toogleBurger)
+});
 
