@@ -6,10 +6,13 @@
 const burgIco = document.querySelector('.burger-menu')
 const mainNav = document.querySelector('.header__main-nav')
 const menu = document.querySelector('.header_menu')
+const body = document.querySelector('body')
 
 burgIco.addEventListener('click', () => {
     burgIco.classList.toggle('active');
     mainNav.classList.toggle('header__main-nav_disabled');
     menu.classList.toggle('header_menu_disabled');
+    body.classList.toggle('no-scroll');
+    // console.log(body);
 })
 

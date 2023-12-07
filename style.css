@@ -790,6 +790,10 @@ header nav a:hover::after {
     max-width: 688px;
   }
 
+  .no-scroll {
+    overflow: hidden;
+  }
+
   .header__main-nav {
     display: block;
     position: absolute;
