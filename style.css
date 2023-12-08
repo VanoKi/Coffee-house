@@ -204,9 +204,9 @@ header nav a:hover::after {
 .enjoy {
   /* max-width: 1360px; */
   /* height: auto; */
-  /* background-image: url(assets/enjoy/img-hero.jpg); */
-  /* background-size: cover; */
-  /* background-position-y: -30px; */
+  /* background-image: url(assets/enjoy/img-hero.jpg);
+  background-size: cover;
+  background-position-y: -30px; */
   border-radius: 40px;
   /* padding: 101px; */
   padding-left: 100px;
@@ -215,12 +215,31 @@ header nav a:hover::after {
   /* margin-bottom: 10px; */
 }
 
+.video_wrap {
+  position: absolute;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
 .video {
+  /* position: relative;
+  z-index: 0; */
   width: 1350px;
   height: 644px;
+  object-fit: cover;
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%; */
+
+  /* aspect-ratio: 16/9; */
 }
 
 .enjoy__content {
+  position: relative;
+  z-index: 1;
   width: 530px;
   display: flex;
   flex-direction: column;
