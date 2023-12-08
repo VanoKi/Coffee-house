@@ -230,7 +230,7 @@ header nav a:hover::after {
   border: none;
   border-radius: 100px;
   box-sizing: border-box;
-  padding: 20px 78px;
+  padding: 20px 65px;
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -812,7 +812,7 @@ header nav a:hover::after {
   }
 
   .about_img {
-    /* width: 688px; */
+    width: 688px;
   }
 
   .about_wrap {
