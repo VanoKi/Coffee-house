@@ -797,9 +797,9 @@ header nav a:hover::after {
   .header__main-nav {
     display: block;
     position: absolute;
-    top: 10%;
+    top: 80px;
     right: 0;
-    z-index: 2;
+    z-index: 1;
     transition: right .7s ease;
   }
 
@@ -811,16 +811,17 @@ header nav a:hover::after {
   .header_menu {
     display: flex;
     justify-content: center;
+    align-items: baseline;
     position: absolute;
-    bottom: 0;
+    top: 594px;
     right: 0;
     width: 100%;
-    height: 55vh;
+    height: 400px;
     font-size: 32px;
     color: var(--text-dark);
     background: var(--bg-body);
     padding: 0;
-    z-index: 1;
+    z-index: 2;
     transition: right .7s ease;
   }
 
@@ -847,7 +848,7 @@ header nav a:hover::after {
   }
 
   .main-menu li:first-child {
-    margin-top: 82px;
+    margin-top: 88px;
   }
 
   .enjoy {
