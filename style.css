@@ -203,6 +203,8 @@ header nav a:hover::after {
 
 .enjoy_wrap {
   position: relative;
+  overflow: hidden;
+  padding: 100px;
 }
 
 .enjoy {
@@ -232,24 +234,19 @@ header nav a:hover::after {
 }
 
 .video {
-  /* position: relative; */
-  /* z-index: 0; */
-  /* width: 1350px; */
-  /* height: 644px; */
-  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  /* right: 0; */
   width: 100%;
   height: 100%;
-  /* aspect-ratio: 16/9; */
+  object-fit: cover;
 }
 
 .enjoy__content {
-  /* position: relative; */
-  /* z-index: 1; */
-  width: 530px;
+  position: relative;
+  z-index: 1;
+  max-width: 530px;
   display: flex;
   flex-direction: column;
   gap: 40px;
