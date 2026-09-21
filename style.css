@@ -9,6 +9,17 @@
   --border-dark: #665F55;
 }
 
+:root[data-theme="dark"] {
+  --text-dark: #F7EEE7;
+  --text-light: #F7EEE7;
+  --text-accent: #E8B58B;
+  --bg-body: #211D1B;
+  --bg-container: #493A34;
+  --bg-backdrop: #120F0ECC;
+  --border-light: #A48979;
+  --border-dark: #B99A86;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -30,7 +41,12 @@ body {
   /* border: 2px solid blue; */
   font-family: 'Inter', sans-serif;
   color: var(--text-dark);
+  transition: background-color .25s ease, color .25s ease;
 }
+
+svg path[stroke] { stroke: var(--text-dark); }
+svg path[fill] { fill: var(--text-dark); }
+.footer__bg svg path[stroke] { stroke: var(--text-light); }
 
 ul {
   list-style-type: none;
@@ -147,6 +163,55 @@ header nav a:hover::after {
   padding-bottom: 4px;
   /* cursor: default; */
   pointer-events: none;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 64px;
+  height: 34px;
+  padding: 3px 5px;
+  border: 1px solid var(--border-dark);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: background-color .25s ease, border-color .25s ease;
+}
+
+.theme-toggle::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 4px;
+  border-radius: 50%;
+  background: var(--text-dark);
+  transition: transform .25s ease, background-color .25s ease;
+}
+
+.theme-toggle__sun,
+.theme-toggle__moon {
+  position: relative;
+  z-index: 1;
+  width: 20px;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+}
+
+.theme-toggle__sun { color: var(--bg-body); }
+.theme-toggle__moon { color: var(--text-dark); }
+
+:root[data-theme="dark"] .theme-toggle::after { transform: translateX(28px); }
+:root[data-theme="dark"] .theme-toggle__sun { color: var(--text-dark); }
+:root[data-theme="dark"] .theme-toggle__moon { color: var(--bg-body); }
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--text-accent);
+  outline-offset: 3px;
 }
 
 /* header end */
@@ -643,6 +708,7 @@ header nav a:hover::after {
   border: 1px solid var(--border-light);
   border-radius: 40px;
   cursor: pointer;
+  background: var(--bg-body);
 }
 
 .menu__card_image-wrap {
@@ -1249,4 +1315,3 @@ header nav a:hover::after {
   }
 
 }
-
