@@ -896,7 +896,7 @@ header nav a:hover::after {
     position: absolute;
     top: 80px;
     right: 0;
-    z-index: 1;
+    z-index: 3;
     transition: right .7s ease;
   }
 
@@ -1182,7 +1182,7 @@ header nav a:hover::after {
     position: absolute;
     top: 80px;
     right: 0;
-    z-index: 1;
+    z-index: 3;
     transition: right .7s ease;
   }
 
