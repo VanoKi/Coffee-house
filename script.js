@@ -23,20 +23,17 @@ themeToggle.addEventListener('click', () => {
 
 const burgIco = document.querySelector('.burger-menu')
 const mainNav = document.querySelector('.header__main-nav')
-const menu = document.querySelector('.header_menu')
 const body = document.querySelector('body')
-function toogleBurger() {
-    burgIco.classList.toggle('active');
-    mainNav.classList.toggle('header__main-nav_disabled');
-    menu.classList.toggle('header_menu_disabled');
-    body.classList.toggle('no-scroll');
-    // console.log('toogled');
+function toggleBurger() {
+    const isOpen = burgIco.classList.toggle('active');
+    mainNav.classList.toggle('header__main-nav_disabled', !isOpen);
+    body.classList.toggle('no-scroll', isOpen);
 }
 
-burgIco.addEventListener('click', toogleBurger)
-const link = document.querySelectorAll('a')
-link.forEach(element => {
-    element.addEventListener('click', toogleBurger)
+burgIco.addEventListener('click', toggleBurger)
+mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (burgIco.classList.contains('active')) toggleBurger();
+    });
 });
-
 
