@@ -56,4 +56,11 @@ prevButton.addEventListener("click", () => {
   showSlide(currentSlide);
 });
 
+dots.forEach((dot, dotIndex) => {
+  dot.addEventListener("click", () => {
+    currentSlide = dotIndex;
+    showSlide(currentSlide);
+  });
+});
+
 showSlide(currentSlide);
