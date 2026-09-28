@@ -28,15 +28,18 @@ const slides = [
   },
 ];
 
+const dots = document.querySelectorAll(".control");
+
 function showSlide(index) {
   const slide = slides[index];
   sliderImage.src = slide.image;
   sliderTitle.textContent = slide.title;
   sliderDescription.textContent = slide.description;
   sliderPrice.textContent = slide.price;
+  dots.forEach((dot, dotIndex) => {
+    dot.classList.toggle("control_active", dotIndex === index);
+  });
 }
-
-showSlide(0);
 
 let currentSlide = 0;
 
