@@ -38,3 +38,5 @@ const link = document.querySelectorAll('a')
 link.forEach(element => {
     element.addEventListener('click', toogleBurger)
 });
+
+
