@@ -8,15 +8,22 @@ let selectedSize = "s";
 let selectedAdditives = new Set();
 let modalOpener = null;
 
-function makeOptionButton(label, selected, onClick) {
+function makeOptionButton(label, selected, optionKey, onClick) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "product-modal__option";
+  button.dataset.optionKey = optionKey;
   button.textContent = label;
   button.setAttribute("aria-pressed", String(selected));
   button.classList.toggle("product-modal__option_selected", selected);
   button.addEventListener("click", onClick);
   return button;
+}
+
+function focusOption(optionKey) {
+  const optionButton = [...productModalDetails.querySelectorAll("[data-option-key]")]
+    .find((button) => button.dataset.optionKey === optionKey);
+  optionButton?.focus();
 }
 
 function updateModalPrice() {
@@ -48,9 +55,11 @@ function renderProductDetails(product) {
   const sizeOptions = document.createElement("div");
   sizeOptions.className = "product-modal__options";
   Object.entries(product.sizes).forEach(([sizeKey, size]) => {
-    const button = makeOptionButton(size.size, sizeKey === selectedSize, () => {
+    const optionKey = `size:${sizeKey}`;
+    const button = makeOptionButton(size.size, sizeKey === selectedSize, optionKey, () => {
       selectedSize = sizeKey;
       renderProductDetails(currentProduct);
+      focusOption(optionKey);
     });
     sizeOptions.append(button);
   });
@@ -62,14 +71,16 @@ function renderProductDetails(product) {
   const additiveOptions = document.createElement("div");
   additiveOptions.className = "product-modal__options";
   product.additives.forEach((additive) => {
+    const optionKey = `additive:${additive.name}`;
     const isSelected = selectedAdditives.has(additive.name);
-    const button = makeOptionButton(additive.name, isSelected, () => {
+    const button = makeOptionButton(additive.name, isSelected, optionKey, () => {
       if (selectedAdditives.has(additive.name)) {
         selectedAdditives.delete(additive.name);
       } else {
         selectedAdditives.add(additive.name);
       }
       renderProductDetails(currentProduct);
+      focusOption(optionKey);
     });
     additiveOptions.append(button);
   });
@@ -126,6 +137,26 @@ productModalCloseButtons.forEach((button) => {
 
 productModal.addEventListener("click", (event) => {
   if (event.target === productModal) closeProductModal();
+});
+
+productModal.addEventListener("keydown", (event) => {
+  if (event.key !== "Tab") return;
+
+  const focusableElements = [
+    ...productModal.querySelectorAll('button:not([disabled]), [href], input:not([disabled])'),
+  ];
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+  if (!firstElement || !lastElement) return;
+
+  const focusEscaped = !productModal.contains(document.activeElement);
+  const leavingForward = !event.shiftKey && document.activeElement === lastElement;
+  const leavingBackward = event.shiftKey && document.activeElement === firstElement;
+
+  if (focusEscaped || leavingForward || leavingBackward) {
+    event.preventDefault();
+    (event.shiftKey ? lastElement : firstElement).focus();
+  }
 });
 
 document.addEventListener("keydown", (event) => {
