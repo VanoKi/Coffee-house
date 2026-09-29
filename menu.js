@@ -1,5 +1,10 @@
 const cardsContainer = document.querySelector(".menu__cards");
 const categoryButtons = document.querySelectorAll(".menu__btn[data-category]");
+const showMoreButton = document.querySelector(".refresh_btn");
+const mobileCardsQuery = window.matchMedia("(max-width: 768px)");
+const cardsPerPage = 4;
+let selectedProducts = [];
+let isExpanded = false;
 
 const imagePaths = {
   coffee: { folder: "coffee", prefix: "" },
@@ -47,13 +52,11 @@ function createCard(product, index) {
 }
 
 function renderCategory(products, category) {
-  const selectedProducts = products.filter(
+  selectedProducts = products.filter(
     (product) => product.category === category,
   );
-  const cards = selectedProducts.map((product, index) =>
-    createCard(product, index),
-  );
-  cardsContainer.replaceChildren(...cards);
+  isExpanded = false;
+  renderCards();
 
   categoryButtons.forEach((button) => {
     button.classList.toggle(
@@ -63,12 +66,37 @@ function renderCategory(products, category) {
   });
 }
 
+function renderCards() {
+  const shouldLimitCards = mobileCardsQuery.matches && !isExpanded;
+  const cards = selectedProducts.map((product, index) => {
+    const card = createCard(product, index);
+    card.hidden = shouldLimitCards && index >= cardsPerPage;
+    return card;
+  });
+  cardsContainer.replaceChildren(...cards);
+
+  const hasHiddenCards = mobileCardsQuery.matches &&
+    !isExpanded &&
+    selectedProducts.length > cardsPerPage;
+  showMoreButton.hidden = !hasHiddenCards;
+}
+
 let allProducts = [];
 
 categoryButtons.forEach((button) => {
   button.addEventListener("click", () => {
     renderCategory(allProducts, button.dataset.category);
   });
+});
+
+showMoreButton.addEventListener("click", () => {
+  isExpanded = true;
+  renderCards();
+});
+
+mobileCardsQuery.addEventListener("change", () => {
+  isExpanded = false;
+  renderCards();
 });
 
 fetch("./products.json")

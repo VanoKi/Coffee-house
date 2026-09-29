@@ -756,6 +756,10 @@ header nav a:hover::after {
   background: var(--bg-body);
 }
 
+.menu__card[hidden] {
+  display: none;
+}
+
 .menu__card_image-wrap {
   overflow: hidden;
   border-radius: 40px;
@@ -801,14 +805,23 @@ header nav a:hover::after {
 
 .refresh_btn {
   display: none;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   width: 60px;
   height: 60px;
   border: 1px solid var(--border-dark);
   border-radius: 100px;
-  padding: 18px;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  appearance: none;
   cursor: pointer;
   transition: .5s;
+}
+
+.refresh_btn[hidden] {
+  display: none;
 }
 
 /* .menu-section .arrow_wrap {
@@ -896,16 +909,6 @@ header nav a:hover::after {
     align-items: center;
   }
 
-  .menu__cards {
-    width: 660px;
-    height: 1058px;
-    overflow: hidden;
-  }
-
-  .refresh_btn {
-    display: block;
-    margin-top: 38px;
-  }
 }
 
 @media (max-width: 952px) {
@@ -1049,15 +1052,13 @@ header nav a:hover::after {
   }
 
   .menu__cards {
-    height: 1059px;
-    overflow-y: hidden;
-    padding-left: 14px;
-    padding-top: 4px;
+    width: 100%;
+    padding: 4px 0 0 14px;
   }
 
-  .refresh_btn {
-    display: block;
-    margin-top: 38px;
+  .refresh_btn:not([hidden]) {
+    display: flex;
+    margin: 38px auto 0;
   }
 
   /* .menu-section .arrow_wrap {
@@ -1207,14 +1208,6 @@ header nav a:hover::after {
     height: 348px;
   }
 
-  .menu__cards {
-    width: 316px;
-    height: 2150px;
-    overflow-y: hidden;
-    padding-left: 14px;
-    padding-top: 4px;
-  }
-
 }
 
 @media (max-width: 480px) {
@@ -1354,13 +1347,6 @@ header nav a:hover::after {
     padding-top: 0px;
     width: 348px;
     height: 348px;
-  }
-
-  .menu__cards {
-    height: 2152px;
-    overflow-y: hidden;
-    padding-left: 14px;
-    padding-top: 4px;
   }
 
   .footer__bg {
