@@ -667,7 +667,7 @@ header nav a:hover::after {
   padding: 8px 16px 8px 8px;
   border: 1px solid var(--border-light);
   border-radius: 100px;
-  background: transparent;
+  background-color: var(--bg-body);
   color: inherit;
   font: inherit;
   cursor: pointer;
