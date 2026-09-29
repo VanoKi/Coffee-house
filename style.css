@@ -826,6 +826,88 @@ header nav a:hover::after {
   display: none;
 }
 
+/* product modal foundation */
+.product-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+  overflow-y: auto;
+  background: var(--bg-backdrop);
+}
+
+.product-modal-backdrop[hidden] {
+  display: none;
+}
+
+.product-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: min(800px, 100%);
+  max-height: 100%;
+  padding: 16px;
+  overflow-y: auto;
+  border-radius: 40px;
+  background: var(--bg-body);
+  color: var(--text-dark);
+}
+
+.product-modal__content {
+  display: grid;
+  grid-template-columns: minmax(0, 310px) minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+  min-height: 250px;
+}
+
+.product-modal__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 32px;
+  object-fit: cover;
+}
+
+.product-modal__details {
+  min-width: 0;
+}
+
+.product-modal__close-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border-dark);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-dark);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.product-modal__close-button {
+  align-self: stretch;
+  min-height: 44px;
+  border: 1px solid var(--border-dark);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--text-dark);
+  font: inherit;
+}
+
+.product-modal__close-icon:focus-visible,
+.product-modal__close-button:focus-visible {
+  outline: 3px solid var(--text-accent);
+  outline-offset: 3px;
+}
+
 /* .menu-section .arrow_wrap {
   display: block;
 } */
@@ -927,6 +1009,14 @@ header nav a:hover::after {
 }
 
 @media (max-width: 768px) {
+
+  .product-modal-backdrop {
+    padding: 20px;
+  }
+
+  .product-modal {
+    width: min(600px, 100%);
+  }
 
   /* body {
     width: 768px;
@@ -1125,6 +1215,25 @@ header nav a:hover::after {
 
   .btn-menu img {
     display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-modal {
+    gap: 16px;
+    padding: 12px;
+    border-radius: 28px;
+  }
+
+  .product-modal__content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .product-modal__image {
+    width: min(100%, 280px);
+    justify-self: center;
+    border-radius: 20px;
   }
 }
 
