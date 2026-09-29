@@ -905,11 +905,9 @@ header nav a:hover::after {
   .header__main-nav {
     display: flex;
     position: fixed;
-    inset: 0;
+    inset: 96px 0 0;
     width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    right: 0;
+    height: auto;
     z-index: 3;
     align-items: center;
     justify-content: center;
@@ -1042,6 +1040,11 @@ header nav a:hover::after {
     height: 44px;
     border-radius: 100px;
     border: 1px solid var(--border-dark);
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
   }
 
   .burger-menu span {
@@ -1194,11 +1197,9 @@ header nav a:hover::after {
   .header__main-nav {
     display: flex;
     position: fixed;
-    inset: 0;
+    inset: 96px 0 0;
     width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    right: 0;
+    height: auto;
     z-index: 3;
     align-items: center;
     justify-content: center;

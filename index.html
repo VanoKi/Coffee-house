@@ -44,7 +44,7 @@
                         <img src="assets/logo/logo.png" alt="logo" />
                     </a>
                 </div>
-                <nav class="header__main-nav header__main-nav_disabled">
+                <nav id="main-navigation" class="header__main-nav header__main-nav_disabled">
                     <ul class="main-menu">
                         <li><a href="#favorite">Favorite coffee</a></li>
                         <li><a href="#about">About</a></li>
@@ -67,9 +67,15 @@
                     <span class="theme-toggle__sun" aria-hidden="true">☀</span>
                     <span class="theme-toggle__moon" aria-hidden="true">☾</span>
                 </button>
-                <div class="burger-menu">
+                <button
+                    class="burger-menu"
+                    type="button"
+                    aria-controls="main-navigation"
+                    aria-expanded="false"
+                    aria-label="Open navigation menu"
+                >
                     <span></span>
-                </div>
+                </button>
             </div>
         </header>
         <main>
