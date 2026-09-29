@@ -1,8 +1,8 @@
-const SliderCard = document.querySelector(".slider_card");
-const sliderImage = SliderCard.querySelector("img");
-const sliderTitle = SliderCard.querySelector("h3");
-const sliderDescription = SliderCard.querySelector(".slider-description");
-const sliderPrice = SliderCard.querySelector(".slider-price");
+const sliderCard = document.querySelector(".slider_card");
+const sliderImage = sliderCard.querySelector("img");
+const sliderTitle = sliderCard.querySelector("h3");
+const sliderDescription = sliderCard.querySelector(".slider-description");
+const sliderPrice = sliderCard.querySelector(".slider-price");
 
 const slides = [
   {
