@@ -95,11 +95,11 @@ function renderProductDetails(product) {
   updateModalPrice();
 }
 
-function openProductModal(product, imageSrc) {
+function openProductModal(product, imageSrc, opener = document.activeElement) {
   currentProduct = product;
   selectedSize = Object.keys(product.sizes)[0];
   selectedAdditives = new Set();
-  modalOpener = document.activeElement;
+  modalOpener = opener;
 
   productModalImage.src = imageSrc;
   productModalImage.alt = product.name;

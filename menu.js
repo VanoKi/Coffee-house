@@ -15,6 +15,10 @@ const imagePaths = {
 function createCard(product, index) {
   const card = document.createElement("div");
   card.className = "menu__card";
+  card.tabIndex = 0;
+  card.setAttribute("role", "button");
+  card.setAttribute("aria-haspopup", "dialog");
+  card.setAttribute("aria-label", `Show details for ${product.name}`);
 
   const imageWrap = document.createElement("div");
   imageWrap.className = "menu__card_image-wrap";
@@ -47,6 +51,18 @@ function createCard(product, index) {
   textWrap.append(title, description);
   descriptionWrap.append(textWrap, price);
   card.append(imageWrap, descriptionWrap);
+
+  function openDetails() {
+    window.CoffeeHouseModal.open(product, image.src, card);
+  }
+
+  card.addEventListener("click", openDetails);
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openDetails();
+    }
+  });
 
   return card;
 }

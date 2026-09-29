@@ -758,6 +758,11 @@ header nav a:hover::after {
   background: var(--bg-body);
 }
 
+.menu__card:focus-visible {
+  outline: 3px solid var(--text-accent);
+  outline-offset: 4px;
+}
+
 .menu__card[hidden] {
   display: none;
 }
