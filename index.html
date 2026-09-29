@@ -134,7 +134,11 @@
                         coffee
                     </h2>
                     <div class="slider slider__inner">
-                        <div class="arrow_wrap slider-prev">
+                        <button
+                            class="arrow_wrap slider-prev"
+                            type="button"
+                            aria-label="Previous coffee"
+                        >
                             <svg
                                 width="24"
                                 height="24"
@@ -151,7 +155,7 @@
                                     />
                                 </g>
                             </svg>
-                        </div>
+                        </button>
                         <div class="slider_card">
                             <img
                                 class="slider_card_img"
@@ -168,7 +172,11 @@
                             </p>
                             <p class="heading-3 slider-price">$5.50</p>
                         </div>
-                        <div class="arrow_wrap slider-next">
+                        <button
+                            class="arrow_wrap slider-next"
+                            type="button"
+                            aria-label="Next coffee"
+                        >
                             <svg
                                 width="24"
                                 height="24"
@@ -185,12 +193,27 @@
                                     />
                                 </g>
                             </svg>
-                        </div>
+                        </button>
                     </div>
                     <div class="controls">
-                        <div class="control control_active"></div>
-                        <div class="control"></div>
-                        <div class="control"></div>
+                        <button
+                            class="control control_active"
+                            type="button"
+                            aria-label="Show coffee 1"
+                            aria-current="true"
+                        ></button>
+                        <button
+                            class="control"
+                            type="button"
+                            aria-label="Show coffee 2"
+                            aria-current="false"
+                        ></button>
+                        <button
+                            class="control"
+                            type="button"
+                            aria-label="Show coffee 3"
+                            aria-current="false"
+                        ></button>
                     </div>
                 </div>
             </section>

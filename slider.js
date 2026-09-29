@@ -30,14 +30,23 @@ const slides = [
 
 const dots = document.querySelectorAll(".control");
 
-function showSlide(index) {
+function showSlide(index, direction = 1) {
   const slide = slides[index];
   sliderImage.src = slide.image;
+  sliderImage.alt = slide.title;
   sliderTitle.textContent = slide.title;
   sliderDescription.textContent = slide.description;
   sliderPrice.textContent = slide.price;
+  sliderCard.classList.remove("slider_card_enter-next", "slider_card_enter-prev");
+  // Restart the entrance animation even when the same direction is used twice.
+  void sliderCard.offsetWidth;
+  sliderCard.classList.add(
+    direction > 0 ? "slider_card_enter-next" : "slider_card_enter-prev",
+  );
   dots.forEach((dot, dotIndex) => {
-    dot.classList.toggle("control_active", dotIndex === index);
+    const isActive = dotIndex === index;
+    dot.classList.toggle("control_active", isActive);
+    dot.setAttribute("aria-current", String(isActive));
   });
 }
 
@@ -46,20 +55,24 @@ let currentSlide = 0;
 const prevButton = document.querySelector(".slider-prev");
 const nextButton = document.querySelector(".slider-next");
 
+function moveSlide(direction) {
+  currentSlide = (currentSlide + direction + slides.length) % slides.length;
+  showSlide(currentSlide, direction);
+}
+
 nextButton.addEventListener("click", () => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
+  moveSlide(1);
 });
 
 prevButton.addEventListener("click", () => {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
+  moveSlide(-1);
 });
 
 dots.forEach((dot, dotIndex) => {
   dot.addEventListener("click", () => {
+    const direction = dotIndex >= currentSlide ? 1 : -1;
     currentSlide = dotIndex;
-    showSlide(currentSlide);
+    showSlide(currentSlide, direction);
   });
 });
 
