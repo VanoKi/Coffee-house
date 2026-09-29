@@ -1,4 +1,11 @@
 const cardsContainer = document.querySelector(".menu__cards");
+const categoryButtons = document.querySelectorAll(".menu__btn[data-category]");
+
+const imagePaths = {
+  coffee: { folder: "coffee", prefix: "" },
+  tea: { folder: "tea", prefix: "tea-" },
+  dessert: { folder: "desert", prefix: "dessert-" },
+};
 
 function createCard(product, index) {
   const card = document.createElement("div");
@@ -8,7 +15,9 @@ function createCard(product, index) {
   imageWrap.className = "menu__card_image-wrap";
 
   const image = document.createElement("img");
-  image.src = `assets/menu_cards/coffee/${index + 1}.png`;
+  const imagePath = imagePaths[product.category];
+  image.src = `assets/menu_cards/${imagePath.folder}/` +
+    `${imagePath.prefix}${index + 1}.png`;
   image.alt = product.name;
   imageWrap.append(image);
 
@@ -37,16 +46,38 @@ function createCard(product, index) {
   return card;
 }
 
-function renderCoffee(products) {
-  const coffee = products.filter((product) => product.category === "coffee");
-  const cards = coffee.map((product, index) => createCard(product, index));
+function renderCategory(products, category) {
+  const selectedProducts = products.filter(
+    (product) => product.category === category,
+  );
+  const cards = selectedProducts.map((product, index) =>
+    createCard(product, index),
+  );
   cardsContainer.replaceChildren(...cards);
+
+  categoryButtons.forEach((button) => {
+    button.classList.toggle(
+      "menu__btn_active",
+      button.dataset.category === category,
+    );
+  });
 }
+
+let allProducts = [];
+
+categoryButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    renderCategory(allProducts, button.dataset.category);
+  });
+});
 
 fetch("./products.json")
   .then((response) => {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return response.json();
   })
-  .then(renderCoffee)
+  .then((products) => {
+    allProducts = products;
+    renderCategory(allProducts, "coffee");
+  })
   .catch((error) => console.error("Не удалось загрузить меню:", error));
